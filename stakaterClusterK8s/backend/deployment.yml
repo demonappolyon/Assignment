@@ -1,0 +1,27 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: backend
+  labels:
+    app: backend
+    service: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+      service: backend
+  template:
+    metadata:
+      name: backend
+      labels:
+        app: backend
+        service: backend
+    spec:
+      containers:
+      - name: backend
+        image: stakaterbackend:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8001
+      restartPolicy: Always

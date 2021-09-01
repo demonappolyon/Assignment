@@ -1,0 +1,4 @@
+com\stakater\service\impl\BackendDataCallImpl.class
+com\stakater\StakaterFrontendApplication.class
+com\stakater\constants\ServiceConstants.class
+com\stakater\service\BackendDataCall.class
